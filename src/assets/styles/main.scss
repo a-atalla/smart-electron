@@ -1,0 +1,24 @@
+@import "_variables.scss";
+
+body {
+  position: relative;
+  height: 100vh;
+  background-image: linear-gradient(45deg, $color-bg, lighten( $color-bg, 10% ));
+  font-family: Arial, Helvetica, Helvetica Neue, serif;
+  font-size: $size-font-primary;
+  overflow-y: hidden;
+  background-color: $color-bg;
+
+  .container {
+    .title {
+      color: $color-white;
+    }
+    .icon-container {
+      .icon {
+        width: 150px;
+        height: 150px;
+        color: $color-primary
+      }
+    }
+  }
+}
