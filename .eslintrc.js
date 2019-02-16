@@ -1,3 +1,5 @@
+const path = require('path');
+
 module.exports = {
   extends: 'airbnb',
   parser: 'babel-eslint',
@@ -5,6 +7,13 @@ module.exports = {
     browser: true,
     node: true,
     jest: true
+  },
+  settings: {
+    'import/resolver': {
+      webpack: {
+        config: path.join(__dirname, 'webpack.config.js')
+      }
+    }
   },
   rules: {
     'react/jsx-filename-extension': 'off',
