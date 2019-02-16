@@ -4,7 +4,7 @@
 npm i
 npm run dev 
 ```
-- Distripution
+- Distribution
 ```bash
 npm run make
 ```
