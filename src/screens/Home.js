@@ -6,7 +6,7 @@ const Home = () => (
   <div className="container">
     <Title text="Smart Electron !!" />
     <div className="icon-container">
-      <AtomIcon className="icon"/>
+      <AtomIcon className="icon" />
     </div>
   </div>
 );
