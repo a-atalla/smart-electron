@@ -1,8 +1,8 @@
 {
   "name": "smart-electron",
   "productName": "smart-electron",
-  "version": "1.0.0",
-  "description": "My Electron application description",
+  "version": "0.1.0",
+  "description": "Electron/React boilerplate based on electron-forge@6",
   "main": "main.js",
   "scripts": {
     "dev": "concurrently \"npm run react-dev\" \"npm start\"",
@@ -12,10 +12,10 @@
     "package": "electron-forge package",
     "make": "npm run react-prod && electron-forge make",
     "publish": "electron-forge publish",
-    "lint": "echo \"No linting configured\""
+    "lint:fix": "eslint src --fix"
   },
   "keywords": [],
-  "author": "atalla",
+  "author": "a-atalla",
   "license": "MIT",
   "config": {
     "forge": {
