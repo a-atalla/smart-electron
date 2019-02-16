@@ -1,0 +1,72 @@
+{
+  "name": "smart-electron",
+  "productName": "smart-electron",
+  "version": "1.0.0",
+  "description": "My Electron application description",
+  "main": "main.js",
+  "scripts": {
+    "dev": "concurrently \"npm run react-dev\" \"npm start\"",
+    "react-dev": "webpack-dev-server --config ./webpack.config.js --mode development",
+    "react-prod": "rm -rf dist && webpack --config ./webpack.config.js --mode production",
+    "start": "electron-forge start",
+    "package": "electron-forge package",
+    "make": "npm run react-prod && electron-forge make",
+    "publish": "electron-forge publish",
+    "lint": "echo \"No linting configured\""
+  },
+  "keywords": [],
+  "author": "atalla",
+  "license": "MIT",
+  "config": {
+    "forge": {
+      "packagerConfig": {},
+      "makers": [
+        {
+          "name": "@electron-forge/maker-squirrel",
+          "config": {
+            "name": "smart_electron"
+          }
+        },
+        {
+          "name": "@electron-forge/maker-dmg",
+          "platforms": [
+            "darwin"
+          ]
+        },
+        {
+          "name": "@electron-forge/maker-deb",
+          "config": {}
+        },
+        {
+          "name": "@electron-forge/maker-rpm",
+          "config": {}
+        }
+      ]
+    }
+  },
+  "dependencies": {
+    "electron-is-dev": "^1.0.1",
+    "electron-squirrel-startup": "^1.0.0"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.3.3",
+    "@babel/preset-env": "^7.3.1",
+    "@babel/preset-react": "^7.0.0",
+    "@electron-forge/cli": "6.0.0-beta.33",
+    "@electron-forge/maker-deb": "6.0.0-beta.33",
+    "@electron-forge/maker-dmg": "^6.0.0-beta.22",
+    "@electron-forge/maker-rpm": "6.0.0-beta.33",
+    "@electron-forge/maker-squirrel": "6.0.0-beta.33",
+    "@svgr/webpack": "^4.1.0",
+    "babel-loader": "^8.0.5",
+    "concurrently": "^4.1.0",
+    "copy-webpack-plugin": "^4.6.0",
+    "electron": "4.0.5",
+    "react": "^16.8.2",
+    "react-dom": "^16.8.2",
+    "react-hot-loader": "^4.6.5",
+    "webpack": "^4.29.4",
+    "webpack-cli": "^3.2.3",
+    "webpack-dev-server": "^3.1.14"
+  }
+}
