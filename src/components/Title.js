@@ -1,5 +1,10 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 
-const Title = (props) => (<h2 className="title">{props.text.toUpperCase()}</h2>);
+const Title = ({ text }) => (<h2 className="title">{text.toUpperCase()}</h2>);
+
+Title.propTypes = {
+  text: PropTypes.string.isRequired,
+};
 
 export default Title;
