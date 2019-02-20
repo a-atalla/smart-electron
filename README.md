@@ -1,3 +1,5 @@
+[![Storybook](https://github.com/storybooks/press/blob/master/badges/storybook.svg)](link to site)
+
 # Smart Electron
 - Development
 ```bash
